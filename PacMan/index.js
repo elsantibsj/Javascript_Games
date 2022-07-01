@@ -515,6 +515,12 @@ function animate(){
 		}
 	}
 
+	if (pellets.length === 0) {
+		console.log('you win')
+		cancelAnimationFrame(animationId)
+	}
+
+
 	for (let i = powerUps.length - 1; 0 <= i; i--){
 		const powerUp = powerUps[i]
 		powerUp.draw()
